@@ -1,10 +1,10 @@
-import imageOne from "../../assets/images/imageOne.jpg";
+import imageOne from "../../assets/images/ImageOne.jpg";
 
-import imageTwo from "../../assets/images/imageOne.jpg";
-import imageThree from "../../assets/images/imagesTwo.jpg";
-import imageFour from "../../assets/images/imageThreee.jpg";
-import imageFive from "../../assets/images/imageFour.jpg";
-import imageSix from "../../assets/images/imageFive.jpg";
+import imageTwo from "../../assets/images/ImageOne.jpg";
+import imageThree from "../../assets/images/ImagesTwo.jpg";
+import imageFour from "../../assets/images/ImageThreee.jpg";
+import imageFive from "../../assets/images/ImageFour.jpg";
+import imageSix from "../../assets/images/ImageFive.jpg";
 function Gallery() {
   return (
     <section class="text-gray-600 body-font">
