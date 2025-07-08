@@ -364,7 +364,7 @@ function Cart() {
           <p className="text-gray-600 mt-2">Add some items to see them here.</p>
         </div>
       )}
-      <div className="absolute top-10 w-full ">
+      <div className="absolute min-h-screen top-10 w-full ">
         {checkpayment ? (
           <div className=" min-h-screen w-full bg-white flex items-center justify-center px-4 py-12">
             <div className="bg-white rounded-2xl shadow-lg max-w-4xl w-full grid md:grid-cols-2 gap-8 p-8">
