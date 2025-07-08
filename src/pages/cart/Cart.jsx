@@ -12,14 +12,7 @@ function Cart() {
     useContext(mycontext);
   const [checkpayment, setcheckpayment] = useState(false);
   const [ispageactive, setpageactive] = useState(false);
-  const [PaymentDetails, setPaymentDetails] = useState({
-    username: "",
-    useremail: "",
-    useraddress: "",
-    cardnumber: "",
-    Monthyear: "",
-    Cvv: "",
-  });
+
 
   const auth = getAuth(app);
   useEffect(() => {
@@ -38,41 +31,6 @@ function Cart() {
     removetocart(id);
   };
 
-  const handelepayment = (e) => {
-    e.preventDefault();
-    setPaymentDetails({ ...PaymentDetails, [e.target.name]: e.target.value });
-    console.log(PaymentDetails);
-  };
-
-  const Paymentsucess = () => {
-    if (
-      PaymentDetails.username === "" ||
-      PaymentDetails.useraddress === "" ||
-      PaymentDetails.Monthyear === "" ||
-      PaymentDetails.Cvv === "" ||
-      PaymentDetails.cardnumber === "" ||
-      PaymentDetails.useremail === ""
-    ) {
-      toast.error("All Field Required", {
-        position: "top-left",
-      });
-    } else {
-      toast.success("Order Successfully", {
-        position: "top-left",
-      });
-      setPaymentDetails({username: "",
-    useremail: "",
-    useraddress: "",
-    cardnumber: "",
-    Monthyear: "",
-    Cvv: "",})
-    setTimeout(() => {
-        
-    }, 1000);
-    }
-  };
-  
-
   const handleapply = (e) => {
     e.preventDefault();
     if (cupponcode === "TAX-109") {
@@ -85,17 +43,6 @@ function Cart() {
     0
   );
 
-  const checkpageactive = (e) => {
-    e.preventDefault();
-    if (ispageactive) {
-      setcheckpayment(true);
-    } else {
-      toast.error("Please Login First", {
-        position: "top-left",
-      });
-     setcheckpayment(false)
-    }
-  };
   return (
     <div>
       {addcart && addcart.length > 0 ? (
@@ -364,117 +311,7 @@ function Cart() {
           <p className="text-gray-600 mt-2">Add some items to see them here.</p>
         </div>
       )}
-      <div className="absolute min-h-screen top-10 w-full ">
-        {checkpayment ? (
-          <div className=" min-h-screen w-full bg-white flex items-center justify-center px-4 py-12">
-            <div className="bg-white rounded-2xl shadow-lg max-w-4xl w-full grid md:grid-cols-2 gap-8 p-8">
-              {/* Billing Details */}
-              <div>
-                <h2 className="text-2xl font-bold mb-6">Billing Details</h2>
-                <form className="space-y-4">
-                  <input
-                    type="text"
-                    name="username"
-                    onChange={(e) => handelepayment(e)}
-                    value={PaymentDetails.username}
-                    placeholder="Full Name"
-                    className="w-full border border-gray-300 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  />
-                  <input
-                    type="email"
-                    name="useremail"
-                    onChange={(e) => handelepayment(e)}
-                    value={PaymentDetails.useremail}
-                    placeholder="Email Address"
-                    className="w-full border border-gray-300 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  />
-                  <input
-                    type="text"
-                    placeholder="Billing Address"
-                    name="useraddress"
-                    onChange={(e) => handelepayment(e)}
-                    value={PaymentDetails.useraddress}
-                    className="w-full border border-gray-300 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  />
-                  <h3 className="text-xl font-semibold mt-6">Card Details</h3>
-                  <input
-                    type="text"
-                    placeholder="Card Number"
-                    onChange={(e) => handelepayment(e)}
-                    name="cardnumber"
-                    value={PaymentDetails.cardnumber}
-                    className="w-full border border-gray-300 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  />
-                  <div className="flex gap-4">
-                    <input
-                      type="text"
-                      placeholder="MM/YY"
-                      onChange={(e) => handelepayment(e)}
-                      name="Monthyear"
-                      value={PaymentDetails.Monthyear}
-                      className="w-full border border-gray-300 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    />
-                    <input
-                      type="text"
-                      placeholder="CVV"
-                      name="Cvv"
-                      onChange={(e) => handelepayment(e)}
-                      value={PaymentDetails.Cvv}
-                      className="w-full border border-gray-300 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    />
-                  </div>
-                  <button
-                    type="button"
-                    onClick={Paymentsucess}
-                    className="w-full cursor-pointer bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition"
-                  >
-                    Pay Now $
-                    {!isapply
-                      ? `${(priceofallproducts - 10).toFixed(0)}`
-                      : `${priceofallproducts.toFixed(0)}`}
-                  </button>
-                </form>
-              </div>
 
-              {/* Order Summary */}
-              <div className="bg-gray-50 p-6 rounded-xl shadow-inner">
-                <h2 className="text-xl font-semibold mb-4">Order Summary</h2>
-                <ul className="space-y-4 text-gray-700">
-                  <li className="flex justify-between">
-                    <span>Total Price</span>
-                    <span>
-                      $
-                      {!isapply
-                        ? `${(priceofallproducts - 10).toFixed(0)}`
-                        : `${priceofallproducts.toFixed(0)}`}
-                    </span>
-                  </li>
-
-                  <hr className="border-t border-gray-300" />
-                  <li className="flex justify-between font-bold text-lg">
-                    <span>Total</span>
-                    <span>
-                      $
-                      {!isapply
-                        ? `${(priceofallproducts - 10).toFixed(0)}`
-                        : `${priceofallproducts.toFixed(0)}`}
-                    </span>
-                  </li>
-                </ul>
-                <div className="mt-6 bg-white p-4 rounded-xl border text-sm text-gray-600">
-                  <p>We accept Visa, Mastercard, and UPI.</p>
-                  <p className="text-xs mt-2 text-gray-400">
-                    This is a design only. No actual payments are processed.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        ) : (
-          <></>
-        )}
-      </div>
-      //
       <ToastContainer />
     </div>
   );
