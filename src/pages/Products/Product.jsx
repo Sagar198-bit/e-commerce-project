@@ -62,9 +62,9 @@ function Product() {
                       <p class="leading-relaxed mb-3">{prodcut.description}</p>
                       <div class="flex items-center flex-wrap ">
                         <a class="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0">
-                          <button onClick={() => addToCart(prodcut)} className="bg-indigo-500 cursor-pointer py-1.5 mt-2 px-6 rounded text-white">
+                          <NavLink to="#" onClick={() => addToCart(prodcut)} className="bg-indigo-500 cursor-pointer py-1.5 mt-2 px-6 rounded text-white">
                             Add to cart
-                          </button>
+                          </NavLink>
                         </a>
                         <span class="text-black mr-3 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-3 py-1 border-r-2 border-gray-200">
                           ${prodcut.price}

@@ -22,7 +22,7 @@ function Home() {
                 <br class="hidden lg:inline-block" />
                 collection 2024
               </h1>
-              <p class="mb-8 leading-relaxed animate__animated animate__bounceInLeft animate__delay-1s">
+              <p class="mb-8 leading-relaxed animate__animated animate__bounceInLeft ">
                 Sleek aluminum design, fast boot speed, crystal-clear display,
                 long battery life, backlit keyboard, silent fan cooling,
                 lightweight build for travel. Smooth multitasking with SSD
@@ -30,7 +30,7 @@ function Home() {
                 responsive touchpad, smart charging, and seamless Wi-Fi for
                 everyday work and streaming.
               </p>
-              <div class="flex justify-center animate__animated animate__bounceInLeft animate__delay-1s">
+              <div class="flex justify-center animate__animated animate__bounceInLeft ">
                 <NavLink
                   to="/Product"
                   className="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg"
@@ -39,7 +39,7 @@ function Home() {
                 </NavLink>
               </div>
             </div>
-            <div class="lg:max-w-lg lg:w-full animate__animated animate__bounceInRight animate__delay-1s w-[300px]">
+            <div class="lg:max-w-lg lg:w-full animate__animated animate__bounceInRight  w-[300px]">
               <img
                 class="object-cover object-center rounded"
                 alt="hero"
@@ -50,7 +50,7 @@ function Home() {
         </section>
       </div>
       <div className=" p-5 flex flex-wrap   gap-5 items-center justify-evenly">
-        <div className="flex animate__animated  animate__bounceInUp rounded-2xl text-black bg-[#f3f4f6] p-5 px-10 gap-2">
+        <div className="flex  rounded-2xl text-black bg-[#f3f4f6] p-5 px-10 gap-2">
           <MdLocalShipping size={30} />
           <div>
             <p className="text-[20px] font-semibold">Free Delivery</p>
@@ -58,21 +58,21 @@ function Home() {
           </div>
         </div>
 
-        <div className="flex rounded-2xl animate__animated  animate__bounceInUp  text-black bg-[#f3f4f6] p-5 px-10 gap-2">
+        <div className="flex rounded-2xl  text-black bg-[#f3f4f6] p-5 px-10 gap-2">
           <RiRefund2Line size={30} />
           <div>
             <p className="text-[20px] font-semibold">Return & Refund</p>
             <p>Money back guarantee</p>
           </div>
         </div>
-        <div className="flex rounded-2xl animate__animated  animate__bounceInUp  text-black bg-[#f3f4f6] p-5 px-10 gap-2">
+        <div className="flex rounded-2xl   text-black bg-[#f3f4f6] p-5 px-10 gap-2">
           <CiDiscount1 size={30} />
           <div>
             <p className="text-[20px] font-semibold">Member Discount</p>
             <p>On order over $99</p>
           </div>
         </div>
-        <div className="flex rounded-2xl animate__animated  animate__bounceInUp  text-black bg-[#f3f4f6] p-5 px-10 gap-2">
+        <div className="flex rounded-2xl   text-black bg-[#f3f4f6] p-5 px-10 gap-2">
           <MdOutlineSupportAgent size={30} />
           <div>
             <p className="text-[20px] font-semibold">Support 24/7</p>

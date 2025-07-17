@@ -1,4 +1,3 @@
-
 import mycontext from "../../context/Estore";
 import useArrivalProducts from "../../hooks/useArrivalProducts/useArrival";
 import Product from "../../pages/Products/Product";
@@ -6,8 +5,7 @@ import { useContext } from "react";
 import { NavLink } from "react-router-dom";
 const ArrivalSection = () => {
   const data = useArrivalProducts();
-  const{addToCart} = useContext(mycontext)
-  
+  const { addToCart } = useContext(mycontext);
 
   return (
     <div>
@@ -19,8 +17,11 @@ const ArrivalSection = () => {
           <div className="container px-10 py-5  flex flex-wrap  mx-auto">
             <div className="flex flex-wrap -m-4">
               {data.map((prodcuts) => (
-                <NavLink to={`/singleProduct/${prodcuts.id}`} className="p-4 md:w-1/3">
-                  <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
+                <NavLink
+                  to={`/singleProduct/${prodcuts.id}`}
+                  className="p-4 md:w-1/3"
+                >
+                  <div className="h-full border-2 hover:shadow-lg border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
                     <img
                       className="lg:h-48 md:h-36 w-full object-contain"
                       src={prodcuts.images[0]}
@@ -33,12 +34,17 @@ const ArrivalSection = () => {
                       <h1 className="title-font text-lg font-medium text-gray-900 mb-3">
                         {Product.title}
                       </h1>
-                      <p className="leading-relaxed mb-3">{prodcuts.description}</p>
+                      <p className="leading-relaxed mb-3">
+                        {prodcuts.description.slice(0 , 150)}
+                      </p>
                       <div className="flex items-center flex-wrap ">
                         <a className="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0">
-                          <button onClick={() => addToCart(prodcuts)} className="bg-indigo-500 cursor-pointer py-1.5 mt-2 px-6 rounded text-white">
+                          <NavLink
+                            onClick={() => addToCart(prodcuts)}
+                            className="bg-indigo-500 cursor-pointer py-1.5 mt-2 px-6 rounded text-white"
+                          >
                             Add to cart
-                          </button>
+                          </NavLink>
                         </a>
                         <span className="text-black mr-3 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-3 py-1 border-r-2 border-gray-200">
                           ${prodcuts.price}

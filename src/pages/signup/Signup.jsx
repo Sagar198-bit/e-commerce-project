@@ -59,7 +59,7 @@ function Signup() {
               .then(() => {
                 console.log("Profile Upadted")
               })
-              .catch((error) => {
+              .catch(() => {
                 console.log("Error Ocrred")
               });
               

@@ -23,10 +23,13 @@ const TrendingProdcuts = () => {
           <div class="container px-10 py-5  flex flex-wrap  mx-auto">
             <div class="flex flex-wrap -m-4">
               {data.map((prodcuts) => (
-                <NavLink to={`/singleProduct/${prodcuts.id}`} className="p-4 md:w-1/3">
-                  <div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
+                <NavLink
+                  to={`/singleProduct/${prodcuts.id}`}
+                  className="p-4 md:w-1/3  "
+                >
+                  <div class="h-full border-2 hover:shadow-lg border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
                     <img
-                      class="lg:h-48 md:h-36  w-full object-contain"
+                      class="lg:h-48 md:h-36 w-full object-contain"
                       src={prodcuts.images[0]}
                       alt="blog"
                     />
@@ -37,15 +40,16 @@ const TrendingProdcuts = () => {
                       <h1 class="title-font text-lg font-medium text-gray-900 mb-3">
                         {Product.title}
                       </h1>
-                      <p class="leading-relaxed mb-3">{prodcuts.description}</p>
+                      <p class="leading-relaxed mb-3">{prodcuts.description.slice(0 , 150)}</p>
                       <div class="flex items-center flex-wrap ">
                         <a class="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0">
-                          <button
+                          <NavLink
+                            to="#"
                             onClick={() => addToCart(prodcuts, prodcuts.id)}
                             className="bg-indigo-500 cursor-pointer py-1.5 mt-2 px-6 rounded text-white"
                           >
                             Add to cart
-                          </button>
+                          </NavLink>
                         </a>
                         <span class="text-black mr-3  inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-3 py-1 border-r-2 border-gray-200">
                           ${prodcuts.price}

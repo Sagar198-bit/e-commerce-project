@@ -3,7 +3,7 @@ import mycontext from "./Estore";
 const ContextProvider = ({ children }) => {
   const [prodcutsName, setProductsName] = useState("");
   const [addcart, setaddcart] = useState([]);
-  const[username , setusername] = useState('');
+  const [username, setusername] = useState("");
 
   const addProdcutsName = (value) => {
     setProductsName(value);
@@ -25,31 +25,31 @@ const ContextProvider = ({ children }) => {
     }
   };
 
-    const setloginusername = (name) =>{
-      setusername(name)
-    }
- 
+  const setloginusername = (name) => {
+    setusername(name);
+  };
 
   const incrementQuntity = (id) => {
-  setaddcart((previous) =>
-    previous.map((items) =>
-      items.id === id
-        ? { ...items, Quantity: items.Quantity + 1 }
-        : items
-    )
-  );
-};
+    setaddcart((previous) =>
+      previous.map((items) =>
+        items.id === id ? { ...items, Quantity: items.Quantity + 1 } : items
+      )
+    );
+  };
 
+  const decremanetQuntity = (id) => {
+    setaddcart((previous) =>
+      previous.map((items) =>
+        items.id === id && items.Quantity > 1
+          ? { ...items, Quantity: items.Quantity - 1 }
+          : items
+      )
+    );
+  };
 
-const decremanetQuntity = (id) => {
-  setaddcart((previous) =>
-    previous.map((items) =>
-      items.id === id && items.Quantity > 1
-        ? { ...items, Quantity: items.Quantity - 1 }
-        : items
-    )
-  );
-};
+  const removecart = () => {
+    setaddcart([]);
+  };
 
   const removetocart = (productid) => {
     setaddcart(addcart.filter((items) => items.id !== productid));
@@ -65,8 +65,9 @@ const decremanetQuntity = (id) => {
         addToCart,
         removetocart,
         decremanetQuntity,
-        incrementQuntity
-        ,setloginusername
+        incrementQuntity,
+        setloginusername,
+        removecart
       }}
     >
       {children}
