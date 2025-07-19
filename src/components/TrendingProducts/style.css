@@ -1,0 +1,14 @@
+.skelton {
+    opacity: 7;
+    animation: skeltonloading 1s linear infinite alternate;
+}
+
+
+@keyframes skeltonloading {
+    0%{
+        background-color: hsl(200 , 20% , 70%);
+    }
+    100%{
+        background-color: hsl(200 , 20% , 95%);
+    }
+}

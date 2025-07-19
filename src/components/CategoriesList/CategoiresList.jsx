@@ -3,11 +3,7 @@ import { NavLink } from "react-router-dom";
 import mycontext from "../../context/Estore";
 
 function CategoiresList() {
-  
-
   const { addProdcutsName } = useContext(mycontext);
-  
- 
 
   const [categories, setcategories] = useState([]);
 
@@ -32,6 +28,95 @@ function CategoiresList() {
     };
     FetchAllCategory();
   }, []);
+
+  if (categories.length === 0) {
+    return (
+      <div className="flex   flex-wrap justify-center items-center gap-x-15 gap-y-10">
+        <div className="cursor-pointer  bg-[#f3f4f6]   py-4 px-6 lg:w-2xs md:w-3xs  w-full rounded ">
+          <div className="px-4 w-[50%] skelton py-3"></div>
+          <br />
+          <div className="px-10 skelton py-2"></div>
+        </div>
+        <div className="cursor-pointer  bg-[#f3f4f6]   py-4 px-6 lg:w-2xs md:w-3xs  w-full rounded ">
+          <div className="px-4 w-[50%] skelton py-3"></div>
+          <br />
+          <div className="px-10 skelton py-2"></div>
+        </div>
+
+       <div className="cursor-pointer  bg-[#f3f4f6]   py-4 px-6 lg:w-2xs md:w-3xs  w-full rounded ">
+          <div className="px-4 w-[50%] skelton py-3"></div>
+          <br />
+          <div className="px-10 skelton py-2"></div>
+        </div>
+        <div className="cursor-pointer  bg-[#f3f4f6]   py-4 px-6 lg:w-2xs md:w-3xs  w-full rounded ">
+          <div className="px-4 w-[50%] skelton py-3"></div>
+          <br />
+          <div className="px-10 skelton py-2"></div>
+        </div>
+        <div className="cursor-pointer  bg-[#f3f4f6]   py-4 px-6 lg:w-2xs md:w-3xs  w-full rounded ">
+          <div className="px-4 w-[50%] skelton py-3"></div>
+          <br />
+          <div className="px-10 skelton py-2"></div>
+        </div>
+        <div className="cursor-pointer  bg-[#f3f4f6]   py-4 px-6 lg:w-2xs md:w-3xs  w-full rounded ">
+          <div className="px-4 w-[50%] skelton py-3"></div>
+          <br />
+          <div className="px-10 skelton py-2"></div>
+        </div>
+       <div className="cursor-pointer  bg-[#f3f4f6]   py-4 px-6 lg:w-2xs md:w-3xs  w-full rounded ">
+          <div className="px-4 w-[50%] skelton py-3"></div>
+          <br />
+          <div className="px-10 skelton py-2"></div>
+        </div>
+        <div className="cursor-pointer  bg-[#f3f4f6]   py-4 px-6 lg:w-2xs md:w-3xs  w-full rounded ">
+          <div className="px-4 w-[50%] skelton py-3"></div>
+          <br />
+          <div className="px-10 skelton py-2"></div>
+        </div>
+        <div className="cursor-pointer  bg-[#f3f4f6]   py-4 px-6 lg:w-2xs md:w-3xs  w-full rounded ">
+          <div className="px-4 w-[50%] skelton py-3"></div>
+          <br />
+          <div className="px-10 skelton py-2"></div>
+        </div>
+        <div className="cursor-pointer  bg-[#f3f4f6]   py-4 px-6 lg:w-2xs md:w-3xs  w-full rounded ">
+          <div className="px-4 w-[50%] skelton py-3"></div>
+          <br />
+          <div className="px-10 skelton py-2"></div>
+        </div>
+        <div className="cursor-pointer  bg-[#f3f4f6]   py-4 px-6 lg:w-2xs md:w-3xs  w-full rounded ">
+          <div className="px-4 w-[50%] skelton py-3"></div>
+          <br />
+          <div className="px-10 skelton py-2"></div>
+        </div>
+
+        <div className="cursor-pointer  bg-[#f3f4f6]   py-4 px-6 lg:w-2xs md:w-3xs  w-full rounded ">
+          <div className="px-4 w-[50%] skelton py-3"></div>
+          <br />
+          <div className="px-10 skelton py-2"></div>
+        </div>
+        <div className="cursor-pointer  bg-[#f3f4f6]   py-4 px-6 lg:w-2xs md:w-3xs  w-full rounded ">
+          <div className="px-4 w-[50%] skelton py-3"></div>
+          <br />
+          <div className="px-10 skelton py-2"></div>
+        </div>
+       <div className="cursor-pointer  bg-[#f3f4f6]   py-4 px-6 lg:w-2xs md:w-3xs  w-full rounded ">
+          <div className="px-4 w-[50%] skelton py-3"></div>
+          <br />
+          <div className="px-10 skelton py-2"></div>
+        </div>
+       <div className="cursor-pointer  bg-[#f3f4f6]   py-4 px-6 lg:w-2xs md:w-3xs  w-full rounded ">
+          <div className="px-4 w-[50%] skelton py-3"></div>
+          <br />
+          <div className="px-10 skelton py-2"></div>
+        </div>
+        <div className="cursor-pointer  bg-[#f3f4f6]   py-4 px-6 lg:w-2xs md:w-3xs  w-full rounded ">
+          <div className="px-4 w-[50%] skelton py-3"></div>
+          <br />
+          <div className="px-10 skelton py-2"></div>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="flex   flex-wrap justify-center items-center gap-x-15 gap-y-5">

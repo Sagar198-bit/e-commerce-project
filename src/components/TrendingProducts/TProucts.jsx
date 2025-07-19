@@ -4,6 +4,7 @@ import Product from "../../pages/Products/Product";
 import { useContext } from "react";
 import mycontext from "../../context/Estore";
 import { NavLink } from "react-router-dom";
+import "./style.css";
 const TrendingProdcuts = () => {
   const data = useTrendingProducts();
 
@@ -13,6 +14,191 @@ const TrendingProdcuts = () => {
     console.log(addcart);
   }, []);
 
+  if (data.length === 0) {
+    return (
+      <section class="text-gray-600 w-100vw body-font">
+        <div class="container px-5 py-5 w-full flex flex-wrap justify-center  mx-auto">
+          <div class="flex flex-wrap w-full -m-4">
+            <div className="p-4 w-full md:w-1/3">
+              <div class="h-full border-2  bg-white border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
+                <img
+                  class="lg:h-48 md:h-36 skelton border-none p-20 md:p-0  outline-none w-full object-contain"
+                  src=" "
+                />
+                <div class="p-6">
+                  <h2 class="tracking-widest text-xs title-font bg-gray-200 skelton font-medium p-2 text-black mb-1"></h2>
+                  <h1 class="title-font text-lg font-medium bg-gray-200 skelton mt-2 text-gray-900 p-5 mb-3"></h1>
+                  <p class="leading-relaxed bg-gray-200 mb-3"></p>
+                  <div class="flex items-center flex-wrap ">
+                    <a class=" inline-flex skelton items-center md:mb-2 lg:mb-0">
+                      <NavLink
+                        to="#"
+                        className="  cursor-pointer py-3 mt-2 px-15 rounded "
+                      ></NavLink>
+                    </a>
+                    <span class="text-black mr-3 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-3 py-1 border-r-2 border-gray-200"></span>
+                    <span class="text-gray-400 md:visible hidden md:inline-flex items-center leading-none text-sm">
+                      <svg
+                        class="w-4 h-4 mr-1"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        fill="none"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        viewBox="0 0 24 24"
+                      >
+                        <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="p-4 w-full md:w-1/3">
+              <div class="h-full border-2 w-full bg-white border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
+                <img
+                  class="lg:h-48 md:h-36 skelton border-none p-20 md:p-0  outline-none w-full object-contain"
+                  src=" "
+                />
+                <div class="p-6">
+                  <h2 class="tracking-widest text-xs title-font bg-gray-200 skelton font-medium p-2 text-black mb-1"></h2>
+                  <h1 class="title-font text-lg font-medium bg-gray-200 skelton mt-2 text-gray-900 p-5 mb-3"></h1>
+                  <p class="leading-relaxed bg-gray-200 mb-3"></p>
+                  <div class="flex items-center flex-wrap ">
+                    <a class=" inline-flex skelton items-center md:mb-2 lg:mb-0">
+                      <NavLink
+                        to="#"
+                        className="  cursor-pointer py-3 mt-2 px-15 rounded "
+                      ></NavLink>
+                    </a>
+                    <span class="text-black mr-3 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-3 py-1 border-r-2 border-gray-200"></span>
+                    <span class="text-gray-400 md:visible hidden md:inline-flex items-center leading-none text-sm">
+                      <svg
+                        class="w-4 h-4 mr-1"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        fill="none"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        viewBox="0 0 24 24"
+                      >
+                        <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="p-4 w-full md:w-1/3">
+              <div class="h-full border-2 w-full  bg-white border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
+                <img
+                  class="lg:h-48 md:h-36 skelton border-none p-20 md:p-0  outline-none w-full object-contain"
+                  src=" "
+                />
+                <div class="p-6">
+                  <h2 class="tracking-widest text-xs title-font bg-gray-200 skelton font-medium p-2 text-black mb-1"></h2>
+                  <h1 class="title-font text-lg font-medium bg-gray-200 skelton mt-2 text-gray-900 p-5 mb-3"></h1>
+                  <p class="leading-relaxed bg-gray-200 mb-3"></p>
+                  <div class="flex items-center flex-wrap ">
+                    <a class=" inline-flex skelton items-center md:mb-2 lg:mb-0">
+                      <NavLink
+                        to="#"
+                        className="  cursor-pointer py-3 mt-2 px-15 rounded "
+                      ></NavLink>
+                    </a>
+                    <span class="text-black mr-3 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-3 py-1 border-r-2 border-gray-200"></span>
+                    <span class="text-gray-400 md:visible hidden md:inline-flex items-center leading-none text-sm">
+                      <svg
+                        class="w-4 h-4 mr-1"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        fill="none"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        viewBox="0 0 24 24"
+                      >
+                        <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="p-4 w-full md:w-1/3">
+              <div class="h-full border-2 w-full  bg-white border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
+                <img
+                  class="lg:h-48 md:h-36 skelton border-none p-20 md:p-0  outline-none w-full object-contain"
+                  src=" "
+                />
+                <div class="p-6">
+                  <h2 class="tracking-widest text-xs title-font bg-gray-200 skelton font-medium p-2 text-black mb-1"></h2>
+                  <h1 class="title-font text-lg font-medium bg-gray-200 skelton mt-2 text-gray-900 p-5 mb-3"></h1>
+                  <p class="leading-relaxed bg-gray-200 mb-3"></p>
+                  <div class="flex items-center flex-wrap ">
+                    <a class=" inline-flex skelton items-center md:mb-2 lg:mb-0">
+                      <NavLink
+                        to="#"
+                        className="  cursor-pointer py-3 mt-2 px-15 rounded "
+                      ></NavLink>
+                    </a>
+                    <span class="text-black mr-3 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-3 py-1 border-r-2 border-gray-200"></span>
+                    <span class="text-gray-400 md:visible hidden md:inline-flex items-center leading-none text-sm">
+                      <svg
+                        class="w-4 h-4 mr-1"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        fill="none"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        viewBox="0 0 24 24"
+                      >
+                        <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="p-4 w-full md:w-1/3">
+              <div class="h-full border-2 w-full  bg-white border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
+                <img
+                  class="lg:h-48 md:h-36 skelton border-none  p-20 md:p-0 outline-none w-full object-contain"
+                  src=" "
+                />
+                <div class="p-6">
+                  <h2 class="tracking-widest text-xs title-font bg-gray-200 skelton font-medium p-2 text-black mb-1"></h2>
+                  <h1 class="title-font text-lg font-medium bg-gray-200 skelton mt-2 text-gray-900 p-5 mb-3"></h1>
+                  <p class="leading-relaxed bg-gray-200 mb-3"></p>
+                  <div class="flex items-center flex-wrap ">
+                    <a class=" inline-flex skelton items-center md:mb-2 lg:mb-0">
+                      <NavLink
+                        to="#"
+                        className="  cursor-pointer py-3 mt-2 px-15 rounded "
+                      ></NavLink>
+                    </a>
+                    <span class="text-black mr-3 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-3 py-1 border-r-2 border-gray-200"></span>
+                    <span class="text-gray-400 md:visible hidden md:inline-flex items-center leading-none text-sm">
+                      <svg
+                        class="w-4 h-4 mr-1"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        fill="none"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        viewBox="0 0 24 24"
+                      >
+                        <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    );
+  }
   return (
     <div>
       <div className="flex flex-wrap ">
@@ -40,7 +226,9 @@ const TrendingProdcuts = () => {
                       <h1 class="title-font text-lg font-medium text-gray-900 mb-3">
                         {Product.title}
                       </h1>
-                      <p class="leading-relaxed mb-3">{prodcuts.description.slice(0 , 150)}</p>
+                      <p class="leading-relaxed mb-3">
+                        {prodcuts.description.slice(0, 150)}
+                      </p>
                       <div class="flex items-center flex-wrap ">
                         <a class="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0">
                           <NavLink
